@@ -25,7 +25,7 @@ def multi_test(label_path = './dataset'):
     image = tf.image.per_image_standardization(image)
     image = tf.cast(image, tf.float32)
     image = tf.reshape(image,(-1,FLAGS.img_height, FLAGS.img_width,3))#need to focus
-    logits_op = inference(image, FLAGS.num_residual_blocks, reuse=False, is_train=False)
+    logits_op = inference(image, reuse=False, is_train=False)
     prob_op = tf.nn.softmax(logits_op)
     
     #input image
