@@ -105,7 +105,10 @@ class Train(object):
         ckpt = tf.train.get_checkpoint_state('./logs_test_110')
         if ckpt and ckpt.model_checkpoint_path:
             saver.restore(sess, ckpt.model_checkpoint_path)
+            print('----------------------------')
             print('Restored from checkpoint...')
+            print(ckpt)
+            print('----------------------------')
         else:
             sess.run(init)
 

@@ -29,7 +29,7 @@ tf.app.flags.DEFINE_integer('validation_batch_size', 4, '''Validation batch size
 a divisor of 10000 for this task''')
 tf.app.flags.DEFINE_integer('test_batch_size', 4, '''Test batch size''')
 
-tf.app.flags.DEFINE_float('init_lr', 0.1, '''Initial learning rate''')
+tf.app.flags.DEFINE_float('init_lr', 0.01, '''Initial learning rate''')
 tf.app.flags.DEFINE_float('lr_decay_factor', 0.1, '''How much to decay the learning rate each
 time''')
 tf.app.flags.DEFINE_integer('decay_step0', 40000, '''At which step to decay the learning rate''')
@@ -39,7 +39,7 @@ tf.app.flags.DEFINE_integer('decay_step1', 60000, '''At which step to decay the 
 ## The following flags define hyper-parameters modifying the training network
 
 tf.app.flags.DEFINE_integer('num_residual_blocks', 5, '''How many residual blocks do you want''')
-tf.app.flags.DEFINE_float('weight_decay', 0.0002, '''scale for l2 regularization''')
+tf.app.flags.DEFINE_float('weight_decay', 0.002, '''scale for l2 regularization''')
 
 
 ## The following flags are related to data-augmentation

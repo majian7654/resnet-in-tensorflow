@@ -7,7 +7,6 @@ This is the resnet34 structure
 import numpy as np
 from hyper_parameters import *
 
-
 BN_EPSILON = 0.001
 
 def activation_summary(x):
@@ -152,7 +151,7 @@ def residual_block(input_layer, output_channel,  is_train=True):
 
 def inference(input_tensor_batch, reuse, is_train= True):
     '''
-    The main function that defines the ResNet. total layers = 1 + 2n + 2n + 2n +1 = 6n + 2
+    The main function that defines the ResNet. total layers = 1 + (3 + 4 + 6 + 3)*2 +1 = 34
     :param input_tensor_batch: 4D tensor
     :param n: num_residual_blocks
     :param reuse: To build train graph, reuse=False. To build validation graph and share weights
